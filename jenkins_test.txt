@@ -8,13 +8,13 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                print("Test")
+                bat """ node app.js """
                 bat """ curl localhost:3000 """
             }
         }
-        stage('Deploy') { 
+        stage('Deploy') {
             steps {
-             bat """ node app.js """
+                bat """ ECHO done. """
             }
         }
     }
