@@ -10,11 +10,13 @@ pipeline {
         stage('Start testing'){
             steps {
                  bat """ ECHO Start the test scripts """
+                 bat """ ECHO RUNNING TEST YADYADA """
             }
         }
         stage('Deploy'){
             steps {
                  bat """ ECHO Finished """
+                 bat """ docker-compose down """
             }
         }
     }
