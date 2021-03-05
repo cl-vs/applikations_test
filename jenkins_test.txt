@@ -1,20 +1,21 @@
 pipeline {
     agent any 
     stages {
-        stage('Install packages') { 
+        stage('Build docker images & install'){
             steps {
-             bat """ npm install """
+                 bat """ ECHO Get docker images and start them """
+                 bat """ cd compose """
+                 bat """ docker-compose up """
             }
         }
-        stage('Test') { 
+        stage('Start testing'){
             steps {
-                bat """ curl localhost:3000 """
-                bat """ node app.js """
+                 bat """ ECHO Start the test scripts """
             }
         }
-        stage('Deploy') {
+        stage('Deploy'){
             steps {
-                bat """ ECHO done. """
+                 bat """ ECHO Finished """
             }
         }
     }
