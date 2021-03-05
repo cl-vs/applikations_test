@@ -4,8 +4,7 @@ pipeline {
         stage('Build docker images & install'){
             steps {
                  bat """ ECHO Get docker images and start them """
-                 bat """ ECHO cd compose """
-                 bat """ ECHO docker-compose up """
+                 bat """ docker-compose up """
             }
         }
         stage('Start testing'){
