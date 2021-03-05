@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Start testing'){
             steps {
+                 bat """ pip install -U pytest """
                  bat """ pytest .\test.py """
             }
         }
