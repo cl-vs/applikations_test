@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Start testing'){
             steps {
-                 bat """ ECHO Start the test scripts """
-                 bat """ ECHO RUNNING TEST YADYADA """
+                 bat """ pip install -U pytest """
+                 bat """ pytest .\test.py """
             }
         }
         stage('Deploy'){
