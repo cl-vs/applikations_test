@@ -1,3 +1,5 @@
+@Library('jenkins_library')
+
 pipeline {
     agent any 
     stages {
