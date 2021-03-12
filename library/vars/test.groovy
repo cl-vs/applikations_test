@@ -2,5 +2,6 @@
 // vars/YourStepName.groovy
 
 def call() {
-    print("hi")
+    print("hej test grrovy test")
+    // Do something here...
 }
