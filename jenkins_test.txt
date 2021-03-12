@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build docker images & install'){
             steps {
-                 bat """ py --version"""
+                    print("Test")
             }
         }
         stage('Start testing'){
