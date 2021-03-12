@@ -11,6 +11,7 @@ pipeline {
         stage('Start testing'){
             steps {
                     print("Test")
+                    hackyWorkaround()
             }
         }
         stage('Deploy'){
