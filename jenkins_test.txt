@@ -6,20 +6,17 @@ pipeline {
     stages {
         stage('Build docker images & install'){
             steps {
-                 bat """ ECHO Get docker images and start them """
-                 bat """ docker-compose up -d"""
+                 bat """ py --version"""
             }
         }
         stage('Start testing'){
             steps {
-                 bat """ python -m pip install -U pytest """
-                 bat """ pytest .\test.py """
+                    print("Test")
             }
         }
         stage('Deploy'){
             steps {
-                 bat """ ECHO Finished """
-                 bat """ docker-compose down """
+                print("Deploy")
             }
         }
     }
