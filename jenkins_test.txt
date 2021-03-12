@@ -1,4 +1,4 @@
-@Library('pipeline_library')_
+@Library('applikations_test')_
 
 pipeline {
     agent any 
